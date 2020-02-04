@@ -1,37 +1,3 @@
-'''
-	Esther He
-	February 3, 2020
-	Capital One Technical Assessment
-
-	CodeCheck.py takes in a valid input file and outputs the following:
-	Total # of lines:
-	Total # of comment lines:
-	Total # of single line comments:
-	Total # of comment lines within block comments:
-	Total # of block line comments:
-	Total # of TODO’s:
-
-	Note: a valid input file is defined as a file with a filename that does not start with '.', and contains an extension
-
-	1) When a file is checked in, scan the file to count the total number of lines.
-	2) Scan the file to identify comments and count the total lines of comments in the file.
-	3) After identifying the lines of comments, scan to segregate the total number of single line
-	comments and the total number of multi-line comments.
-	4) Any line of code that has a trailing comment should be counted both as lines of code
-	and also a comment line.
-	5) Finally, from all the comments in the file, identify and count the total number of TODOs.
-	6) Please note, that the file that is being checked in could be any valid program file. Files
-	checked in without an extension can be ignored. You can also ignore file names that
-	start with a ‘.’.
-
-Assumptions:
-1. Docstrings are ignored.
-2. Block comments are consecutive lines that start with a '#'.
-3. A single line comment is a line that starts with a '#', but does not belong to a block comment.
-4. TODO lines are lines that start with '# TODO'. If a TODO line does not belong to a block comment, it is then counted as a single line comment.
-5. Inline comments count as single line commnets, but are not counted towards bloack comments.
-'''
-
 class codeCheck:
     def __init__(self, FIN):
         # open input file to read, handle errors with try & except
